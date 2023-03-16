@@ -1,40 +1,165 @@
 body{
-    background-color: #F3E9DE;
+    
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: 100vh;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #256993;
+    
+    
+}
+
+
+
+
+header{
+    background-color: #F3E9DE;
+    margin: 0;
 }
 
 .about{
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    align-items: center;
+
 }
 
+
+article p{
+    display:flex ;
+    align-self: flex-end;
+    margin: 2%;
+}
 
 
 section{
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    align-items: right;
-    justify-content: right;
+    gap: 0.5vw;
+    
+    
 }
 .upperbuttons{
-    align-items: left;
-    justify-content: left;
+   display: grid;
+   grid-template-columns: 6vw 6vw;
+   column-gap: 65vw;
+   margin: 1vw;
+   
 }
 
-.right-button{
+button{
+    background-color: #375F68 ;
+    color: white;
+    border-radius: 10%;
+    width: 7vw;
+    margin: 0.5vw;
+    padding: 1vw;
+}
+
+.rightbutton{
+    background-color: #56536A;
+    margin-right: 1vw;
+}
+
+.cancel{
+    background-color: #9B332C;
+}
+
+
+
+textarea{
+    margin: 1vw;
+}
+
+.key-buttons{
+    width: 79vw;
+    margin: 1vw;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 2vw;
+}
+
+main{
+    background-color: #FAF4EC;
+    margin: 0;
+}
+
+footer{
     position: absolute;
-    right: 10px;
+    bottom: 1vh;
+    left: 50vw;
+}
+
+footer ul{
+   
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    background-color: #FAF4EC;  
+
+
 }
 
 textarea{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: 75vw;
+    height: 20vh;
 }
 
+@media screen and (max-width:600px) {
+    body{
+        grid-template-columns: 100vw;
+        grid-template-rows: 50vh 30vh 20vh ;
+        background-color: #FAF4EC;
+    }
 
+    header{
+        grid-row: 2/3;
+    }
+    main{
+        grid-row: 1/2;
+    }
 
+    .upperbuttons{
+        gap: 80vw;
+        font-size: 50%;
+    }
+    
 
+    button{
+        width: 13vw;
+        padding: 0;
+    }
+
+    textarea{
+        width: 95vw;
+    }
+    .key-buttons{
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    footer p{
+        align-items: center;
+    }
+
+   .about{
+    width: 100vw;
+   }
+
+   footer{
+    left: 0;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    flex-direction: column;
+   }
+
+  
+    
+    
+}
 
 
