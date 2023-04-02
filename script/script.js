@@ -48,3 +48,17 @@ function makevisible(){
 }
 
 newNote.addEventListener("click", makevisible)
+
+const notesArray = [];
+
+function saveNote() {
+  const asktitle = prompt("What is the title of the note?");
+  const txtbody = txtarea.value;
+  notesArray.push({title: asktitle, body: txtbody});
+  const noteList = document.querySelector(".notelist")
+  const newElement = document.createElement("li")
+  newElement.textContent = asktitle
+  noteList.appendChild(newElement)
+}
+
+savebtn.addEventListener("click", saveNote)
