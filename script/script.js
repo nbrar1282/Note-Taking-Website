@@ -34,22 +34,28 @@ function hidearea(){
 cancelbtn.addEventListener("click", hidearea)
 
 const newNote= document.querySelector(".leftbutton")
-let clickCount = 0
-function makevisible(){
-    clickCount++;
-    dark_theme.classList.remove("nodisplay")
-    cancelbtn.classList.remove("nodisplay")
-    savebtn.classList.remove("nodisplay")
-    txtarea.classList.remove("nodisplay")
-    if (clickCount == 2) {
-        txtarea.value = "";
-      }
+function makevisible() {
+    if (dark_theme.classList.contains("nodisplay")) {
+      dark_theme.classList.remove("nodisplay");
+      cancelbtn.classList.remove("nodisplay");
+      savebtn.classList.remove("nodisplay");
+      txtarea.classList.remove("nodisplay");
+    } else {
+      txtarea.value = "";
+    }
+  }
+  
+  newNote.addEventListener("click", makevisible);
+  
 
-}
-
-newNote.addEventListener("click", makevisible)
 
 const notesArray = [];
+const note1 = {title: "note one", body: "This is the first note."}
+const note2 = {title: "note two", body:"This is the second note."}
+notesArray.push(note1)
+notesArray.push(note2)
+
+
 
 function saveNote() {
   const asktitle = prompt("What is the title of the note?");
@@ -62,3 +68,23 @@ function saveNote() {
 }
 
 savebtn.addEventListener("click", saveNote)
+
+const noteList = document.querySelector('.notelist');
+
+noteList.addEventListener('click', function(event) {
+    if (event.target.tagName === 'LI') {
+      const clickedTitle = event.target.textContent;
+    
+      let note;
+      for (const n of notesArray) {
+        if (n.title === clickedTitle) {
+          note = n;
+          break;
+        }
+      }
+      if (note) {
+        txtarea.value = note.body;
+      }
+    }
+  });
+  
