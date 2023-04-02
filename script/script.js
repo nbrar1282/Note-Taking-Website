@@ -17,7 +17,34 @@ function bgalter() {
     
     
 }
-
-
-
 dark_theme.addEventListener("click", bgalter)
+
+const cancelbtn = document.querySelector(".cancel")
+const savebtn= document.querySelector(".save")
+const txtarea = document.querySelector("textarea")
+
+function hidearea(){
+    
+    dark_theme.classList.add("nodisplay")
+    cancelbtn.classList.add("nodisplay")
+    savebtn.classList.add("nodisplay")
+    txtarea.classList.add("nodisplay")
+}
+
+cancelbtn.addEventListener("click", hidearea)
+
+const newNote= document.querySelector(".leftbutton")
+let clickCount = 0
+function makevisible(){
+    clickCount++;
+    dark_theme.classList.remove("nodisplay")
+    cancelbtn.classList.remove("nodisplay")
+    savebtn.classList.remove("nodisplay")
+    txtarea.classList.remove("nodisplay")
+    if (clickCount == 2) {
+        txtarea.value = "";
+      }
+
+}
+
+newNote.addEventListener("click", makevisible)

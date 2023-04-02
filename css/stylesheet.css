@@ -180,3 +180,7 @@ textarea{
     background-color: black;
     color: white;
 }
+
+.nodisplay{
+    display: none;
+}
