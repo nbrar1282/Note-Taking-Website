@@ -63,6 +63,7 @@ button{
 .rightbutton{
     background-color: #56536A;
     margin-right: 1vw;
+    
 }
 
 .cancel{
@@ -170,4 +171,12 @@ textarea{
     
 }
 
+.drkTheme{
+    background-color: gray;
+    color: white;
+}
 
+.drk2Theme{
+    background-color: black;
+    color: white;
+}
