@@ -63,6 +63,7 @@ button{
 .rightbutton{
     background-color: #56536A;
     margin-right: 1vw;
+    
 }
 
 .cancel{
@@ -70,6 +71,10 @@ button{
     
 }
 
+.notelist:hover { 
+    cursor: pointer;
+    
+}
 
 
 textarea{
@@ -170,4 +175,16 @@ textarea{
     
 }
 
+.drkTheme{
+    background-color: #332940;
+    color: violet;
+}
 
+.drk2Theme{
+    background-color: black;
+    color: lightblue;
+}
+
+.nodisplay{
+    display: none;
+}
