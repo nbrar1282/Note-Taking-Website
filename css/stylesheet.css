@@ -71,6 +71,10 @@ button{
     
 }
 
+.notelist:hover { 
+    cursor: pointer;
+    
+}
 
 
 textarea{
@@ -172,13 +176,13 @@ textarea{
 }
 
 .drkTheme{
-    background-color: gray;
-    color: white;
+    background-color: #332940;
+    color: violet;
 }
 
 .drk2Theme{
     background-color: black;
-    color: white;
+    color: lightblue;
 }
 
 .nodisplay{

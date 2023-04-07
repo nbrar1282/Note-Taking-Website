@@ -3,13 +3,16 @@ const dark_theme= document.querySelector(".rightbutton")
 function bgalter() {
     const header =document.querySelector("header");
     const main= document.querySelector("main");
+    const body = document.querySelector("body");
     if (dark_theme.textContent == "Dark Theme") {
          header.classList.add("drkTheme")
         main.classList.add("drk2Theme")
+        body.classList.add("drkTheme")
         dark_theme.textContent = "Light Theme"
     }else if(dark_theme.textContent == "Light Theme"){
         header.classList.remove("drkTheme")
         main.classList.remove("drk2Theme")
+        body.classList.remove("drkTheme")
         dark_theme.textContent = "Dark Theme"
     };
         
